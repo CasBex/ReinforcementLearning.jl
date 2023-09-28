@@ -59,10 +59,9 @@ function RLCore.Experiment(
                 batch_size=128,
                 rng=rng
             ),
-            controller=InsertSampleRatioController(
-                threshold=1000,
-                ratio=1/10,
-                n_sampled=-1
+            controller=EpisodeSampleRatioController(
+                threshold=1,
+                ratio=1,
             )
         )
     )
